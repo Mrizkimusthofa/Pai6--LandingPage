@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruang Literasi - Analisis Nawaqidul Islam Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .gradient-text {
+            background: linear-gradient(90deg, #60a5fa, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hidden-content { display: none; }
+        .show { display: block; animation: fadeIn 0.8s ease-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 antialiased">
+
+    <nav class="max-w-6xl mx-auto p-6 flex justify-between items-center border-b border-slate-900">
+        <div class="text-xl font-bold tracking-tighter">RL<span class="text-blue-500">.</span></div>
+        <div class="hidden md:flex space-x-8 text-xs font-semibold uppercase tracking-widest text-slate-500">
+            <a href="#" class="hover:text-blue-400 transition">Beranda</a>
+            <a href="#studi-kasus" class="hover:text-blue-400 transition">Studi Kasus</a>
+            <a href="#metodologi" class="hover:text-blue-400 transition">Metodologi</a>
+            <a href="#kontak" class="hover:text-blue-400 transition">Kontak</a>
+        </div>
+    </nav>
+
+    <header class="max-w-6xl mx-auto px-6 pt-24 pb-20 text-center">
+        <div class="inline-block px-4 py-1 rounded-full bg-blue-500/10 text-blue-400 text-xs font-bold uppercase tracking-widest mb-6 border border-blue-500/20">
+            Research & Academic Assignment 2026
+        </div>
+        <h1 class="text-5xl md:text-8xl font-extrabold mb-8 tracking-tighter leading-none">
+            Ruang <span class="gradient-text">Literasi</span>
+        </h1>
+        <p class="text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed italic">
+            "Membangun nalar kritis terhadap fenomena pembatal keislaman di tengah arus disrupsi informasi digital."
+        </p>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 pb-32">
+        
+        <section id="studi-kasus" class="bg-slate-900 border border-slate-800 rounded-[3rem] p-8 md:p-16 mb-12 shadow-2xl relative overflow-hidden">
+            <div class="absolute -top-20 -left-20 w-64 h-64 bg-purple-500/5 blur-[100px]"></div>
+            
+            <h2 class="text-3xl md:text-5xl font-bold mb-10 text-white tracking-tight">
+                Studi Kasus: Desensitisasi Akidah di Media Sosial
+            </h2>
+            
+            <div class="prose prose-invert max-w-none text-slate-300 space-y-8">
+                <p class="text-xl leading-relaxed">
+                    Era <span class="text-white font-semibold">Post-Truth</span> membawa tantangan besar bagi integritas syahadatain. Praktik <strong class="text-blue-400">Istihza’ (olok-olok)</strong> kini tidak lagi hanya berupa ucapan langsung, melainkan bermutasi dalam bentuk meme, filter AI, dan konten komedi satire yang mengaburkan batasan antara hiburan dan pelanggaran teologis berat.
+                </p>
+
+                <div id="extraContent" class="hidden-content space-y-12 pt-10 border-t border-slate-800">
+                    
+                    <div id="metodologi">
+                        <h4 class="text-2xl font-bold text-white mb-6 flex items-center">
+                            <span class="w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400 mr-3 text-sm">01</span>
+                            Metodologi Analisis
+                        </h4>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800">
+                                <h5 class="font-bold text-blue-400 mb-2">Komparatif Teologis</h5>
+                                <p class="text-sm">Membandingkan tren digital dengan 10 Nawaqidul Islam karya Syaikh Muhammad bin Abdul Wahhab untuk menentukan relevansi hukumnya.</p>
+                            </div>
+                            <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800">
+                                <h5 class="font-bold text-blue-400 mb-2">Observasi Digital</h5>
+                                <p class="text-sm">Analisis perilaku pengguna (user behavior) terhadap konten viral yang mengandung unsur penghinaan agama secara terencana.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-2xl font-bold text-white mb-6">Distingsi: Kritik vs Penghinaan</h4>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left text-sm">
+                                <thead class="bg-slate-800 text-slate-200">
+                                    <tr>
+                                        <th class="px-6 py-4 rounded-tl-xl">Aspek</th>
+                                        <th class="px-6 py-4">Diskusi / Kritik Ilmiah</th>
+                                        <th class="px-6 py-4 rounded-tr-xl">Istihza' (Penghinaan)</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-slate-900 divide-y divide-slate-800">
+                                    <tr>
+                                        <td class="px-6 py-4 font-bold">Niat (Qashd)</td>
+                                        <td class="px-6 py-4">Mencari kebenaran / Solusi</td>
+                                        <td class="px-6 py-4 text-red-400">Merendahkan / Mencemooh</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 font-bold">Metode</td>
+                                        <td class="px-6 py-4">Argumen & Data</td>
+                                        <td class="px-6 py-4 text-red-400">Sarkasme & Olok-olok visual</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 font-bold">Konsekuensi</td>
+                                        <td class="px-6 py-4">Diskusi Intelektual</td>
+                                        <td class="px-6 py-4 text-red-400">Pembatalan Syahadatain*</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="mt-4 text-[10px] text-slate-500 italic">*Jika memenuhi syarat Ilmu, Qashd, dan Ikhtiyar.</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-10">
+                        <div>
+                            <h4 class="text-xl font-bold text-red-400 mb-4 uppercase tracking-wider">Dampak Sosiologis</h4>
+                            <ul class="space-y-3 text-sm">
+                                <li class="flex items-start"><span class="mr-2">⚡</span> Erosi rasa hormat terhadap entitas sakral agama.</li>
+                                <li class="flex items-start"><span class="mr-2">⚡</span> Polarisasi ekstrem di kolom komentar media sosial.</li>
+                                <li class="flex items-start"><span class="mr-2">⚡</span> Normalisasi kekufuran atas nama "kebebasan ekspresi".</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-green-400 mb-4 uppercase tracking-wider">Digital Adab (Solusi)</h4>
+                            <ul class="space-y-3 text-sm">
+                                <li class="flex items-start"><span class="mr-2">✅</span> Penerapan Prinsip Tabayyun Digital sebelum share.</li>
+                                <li class="flex items-start"><span class="mr-2">✅</span> Fokus pada konten narasi tauhid yang inspiratif.</li>
+                                <li class="flex items-start"><span class="mr-2">✅</span> Membangun komunitas literasi akidah yang kritis.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button onclick="toggleReadMore()" id="readMoreBtn" class="mt-12 w-full md:w-auto bg-blue-600 hover:bg-blue-500 text-white font-bold py-5 px-12 rounded-2xl transition-all duration-300 shadow-xl shadow-blue-500/20 active:scale-95 flex items-center justify-center mx-auto md:mx-0">
+                <span>Baca Selengkapnya</span>
+                <svg id="btnIcon" class="w-5 h-5 ml-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+        </section>
+
+        <section class="grid md:grid-cols-3 gap-8">
+            <div class="md:col-span-2 bg-slate-900 p-10 rounded-[2.5rem] border border-slate-800">
+                <h3 class="text-2xl font-bold mb-8 text-white flex items-center">
+                    <span class="mr-3">📚</span> Bibliografi Terpilih
+                </h3>
+                <div class="grid md:grid-cols-2 gap-6 text-xs leading-relaxed text-slate-400">
+                    <p><strong class="text-slate-200">Al-Wahhab, M. B. A.</strong> <em>Kitab Nawaqidul Islam</em>. Klasifikasi 10 pembatal iman esensial.</p>
+                    <p><strong class="text-slate-200">Ibnu Taimiyah.</strong> <em>Al-Saram al-Maslul</em>. Analisis hukum penghinaan simbol agama.</p>
+                    <p><strong class="text-slate-200">MUI.</strong> <em>Fatwa Muamalah Medsosiah (2017)</em>. Pedoman etika digital Islami.</p>
+                    <p><strong class="text-slate-200">Ibnu Katsir.</strong> <em>Tafsir Al-Qur’an Al-Azhim</em>. Penafsiran At-Taubah: 65-66.</p>
+                </div>
+            </div>
+            
+            <div class="bg-gradient-to-br from-blue-600 to-purple-700 p-10 rounded-[2.5rem] text-white">
+                <h3 class="font-bold text-xl mb-4 text-white">Tentang Tugas</h3>
+                <p class="text-sm opacity-90 leading-relaxed mb-6">
+                    Proyek ini disusun oleh <span class="font-bold">Mustofa</span> sebagai bentuk integrasi antara literasi digital dan pemahaman akidah kontemporer.
+                </p>
+                <div class="text-[10px] uppercase font-bold tracking-widest opacity-70">
+                    Status: Verified Submission<br>
+                    Tahun: 2026
+                </div>
+            </div>
+        </section>
+
+        <section id="kontak" class="mt-12 bg-slate-900 border border-slate-800 rounded-[2.5rem] p-8 md:p-16 text-center">
+            <h3 class="text-3xl font-bold mb-4">Feedback Akademik</h3>
+            <p class="text-slate-400 mb-10 max-w-lg mx-auto text-sm">Silakan kirimkan kritik atau saran konstruktif untuk pengembangan materi ini lebih lanjut.</p>
+            <form class="max-w-2xl mx-auto space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <input type="text" placeholder="Nama" class="bg-slate-950 border border-slate-800 rounded-2xl px-6 py-4 focus:border-blue-500 transition outline-none">
+                    <input type="email" placeholder="Email" class="bg-slate-950 border border-slate-800 rounded-2xl px-6 py-4 focus:border-blue-500 transition outline-none">
+                </div>
+                <textarea rows="3" placeholder="Pesan..." class="w-full bg-slate-950 border border-slate-800 rounded-2xl px-6 py-4 focus:border-blue-500 transition outline-none"></textarea>
+                <button class="w-full bg-blue-600 font-bold py-4 rounded-2xl hover:bg-blue-500 transition">Kirim Pesan</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="py-12 border-t border-slate-900 text-center">
+        <p class="text-[10px] text-slate-600 uppercase tracking-[0.5em]">&copy; 2026 MUHAMMAD RIZKI MUSTHOFA</p>
+    </footer>
+
+    <script>
+        function toggleReadMore() {
+            const content = document.getElementById("extraContent");
+            const btn = document.getElementById("readMoreBtn");
+            const icon = document.getElementById("btnIcon");
+            
+            if (content.classList.contains("hidden-content")) {
+                content.classList.remove("hidden-content");
+                content.classList.add("show");
+                btn.querySelector('span').innerText = "Tutup Analisis";
+                icon.style.transform = "rotate(180deg)";
+                btn.classList.replace("bg-blue-600", "bg-slate-800");
+            } else {
+                content.classList.add("hidden-content");
+                content.classList.remove("show");
+                btn.querySelector('span').innerText = "Baca Selengkapnya";
+                icon.style.transform = "rotate(0deg)";
+                btn.classList.replace("bg-slate-800", "bg-blue-600");
+            }
+        }
+    </script>
+</body>
+</html>
