@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruang Literasi - Analisis Nawaqidul Islam Digital</title>
+    <title>Ruang Literasi Qur’ani - Muhammad Rizki Musthofa</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -13,63 +13,212 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .card-glow:hover {
+            box-shadow: 0 0 20px rgba(96, 165, 250, 0.2);
+            transform: translateY(-5px);
+        }
         .hidden-content { display: none; }
         .show { display: block; animation: fadeIn 0.8s ease-out; }
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(30px); }
+            from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body class="bg-slate-950 text-slate-200 antialiased">
 
-    <nav class="max-w-6xl mx-auto p-6 flex justify-between items-center border-b border-slate-900">
-        <div class="text-xl font-bold tracking-tighter">RL<span class="text-blue-500">.</span></div>
-        <div class="hidden md:flex space-x-8 text-xs font-semibold uppercase tracking-widest text-slate-500">
-            <a href="#" class="hover:text-blue-400 transition">Beranda</a>
-            <a href="#studi-kasus" class="hover:text-blue-400 transition">Studi Kasus</a>
-            <a href="#metodologi" class="hover:text-blue-400 transition">Metodologi</a>
-            <a href="#kontak" class="hover:text-blue-400 transition">Kontak</a>
+    <nav class="fixed top-0 w-full z-50 glass-nav border-b border-slate-900 transition-all duration-300">
+        <div class="max-w-6xl mx-auto p-5 flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-tighter text-white">
+                RL <span class="text-blue-500">Qur’ani</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-xs font-semibold uppercase tracking-widest text-slate-400">
+                <a href="#" class="hover:text-blue-400 flex items-center transition"><span class="mr-1">🏠</span> Beranda</a>
+                <a href="#artikel" class="hover:text-blue-400 flex items-center transition"><span class="mr-1">📄</span> Artikel</a>
+                <a href="#kisah-quran" class="hover:text-blue-400 flex items-center transition"><span class="mr-1">📖</span> Kisah Qur’an</a>
+                <a href="#biodata" class="hover:text-blue-400 flex items-center transition"><span class="mr-1">👤</span> Biodata</a>
+                <a href="#kontak" class="hover:text-blue-400 flex items-center transition"><span class="mr-1">✉️</span> Kontak</a>
+            </div>
         </div>
     </nav>
 
-    <header class="max-w-6xl mx-auto px-6 pt-24 pb-20 text-center">
+    <header class="max-w-6xl mx-auto px-6 pt-40 pb-20 text-center">
         <div class="inline-block px-4 py-1 rounded-full bg-blue-500/10 text-blue-400 text-xs font-bold uppercase tracking-widest mb-6 border border-blue-500/20">
-            Research & Academic Assignment 2026
+            Digital Literacy Platform
         </div>
         <h1 class="text-5xl md:text-8xl font-extrabold mb-8 tracking-tighter leading-none">
-            Ruang <span class="gradient-text">Literasi</span>
+            Ruang <span class="gradient-text">Literasi Qur’ani</span>
         </h1>
-        <p class="text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed italic">
-            "Membangun nalar kritis terhadap fenomena pembatal keislaman di tengah arus disrupsi informasi digital."
+        <p class="text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
+            "Menggali hikmah dari kisah-kisah dalam Al-Qur’an untuk membangun karakter dan iman di era digital."
         </p>
     </header>
 
-    <main class="max-w-5xl mx-auto px-6 pb-32">
+    <main class="max-w-6xl mx-auto px-6 pb-32">
         
-        <section id="studi-kasus" class="bg-slate-900 border border-slate-800 rounded-[3rem] p-8 md:p-16 mb-12 shadow-2xl relative overflow-hidden">
-            <div class="absolute -top-20 -left-20 w-64 h-64 bg-purple-500/5 blur-[100px]"></div>
+        <section id="biodata" class="mb-24">
+            <div class="bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700 rounded-[3rem] p-8 md:p-12 shadow-2xl flex flex-col md:flex-row items-center gap-10 hover:shadow-purple-500/10 transition-all duration-500">
+                <div class="relative">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur opacity-40"></div>
+                    <img src="1000004470.jpg" alt="Muhammad Rizki Musthofa" class="relative w-48 h-48 rounded-full object-cover border-4 border-slate-900">
+                </div>
+                <div class="text-center md:text-left space-y-4">
+                    <h2 class="text-3xl font-bold text-white">Muhammad Rizki Musthofa</h2>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs font-semibold uppercase tracking-widest text-slate-400">
+                        <div class="bg-slate-950/50 p-3 rounded-xl border border-slate-700">NIM: 312310034</div>
+                        <div class="bg-slate-950/50 p-3 rounded-xl border border-slate-700">Kelas: TI.23.C1</div>
+                        <div class="bg-slate-950/50 p-3 rounded-xl border border-slate-700">TI Universitas</div>
+                        <div class="bg-slate-950/50 p-3 rounded-xl border border-slate-700">Prodi: T. Informatika</div>
+                    </div>
+                    <p class="text-slate-300 leading-relaxed max-w-xl">
+                        "Mahasiswa Teknik Informatika yang tertarik pada pengembangan web dan literasi digital berbasis nilai-nilai Islam."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="kisah-quran" class="bg-slate-900 border border-slate-800 rounded-[3rem] p-8 md:p-16 mb-12 shadow-2xl relative overflow-hidden">
+            <div class="absolute -top-20 -right-20 w-64 h-64 bg-blue-500/10 blur-[100px]"></div>
             
-            <h2 class="text-3xl md:text-5xl font-bold mb-10 text-white tracking-tight">
-                Studi Kasus: Desensitisasi Akidah di Media Sosial
-            </h2>
+            <div class="inline-block px-4 py-1 rounded-full bg-purple-500/10 text-purple-400 text-xs font-bold mb-6 border border-purple-500/20 uppercase">Featured Story</div>
+            <h2 class="text-3xl md:text-5xl font-bold mb-8 text-white tracking-tight">Kisah Nabi Yusuf AS: Pelajaran Tentang Sabar dan Takdir Allah</h2>
             
             <div class="prose prose-invert max-w-none text-slate-300 space-y-8">
-                <p class="text-xl leading-relaxed">
-                    Era <span class="text-white font-semibold">Post-Truth</span> membawa tantangan besar bagi integritas syahadatain. Praktik <strong class="text-blue-400">Istihza’ (olok-olok)</strong> kini tidak lagi hanya berupa ucapan langsung, melainkan bermutasi dalam bentuk meme, filter AI, dan konten komedi satire yang mengaburkan batasan antara hiburan dan pelanggaran teologis berat.
-                </p>
+                <div class="bg-slate-950/50 p-6 rounded-2xl border-l-4 border-blue-500">
+                    <h3 class="text-xl font-bold text-white mb-2 italic">Pembukaan</h3>
+                    <p>Kisah ini merupakan "Ahsanul Qashash" (Kisah Terbaik) yang diabadikan dalam Al-Qur'an Surah Yusuf. Ia bukan sekadar biografi, melainkan gambaran nyata tentang bagaimana takdir Allah bekerja di balik kesulitan manusia.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">Ringkasan Perjalanan Hidup</h3>
+                    <p>Perjalanan Nabi Yusuf AS dimulai dari sebuah mimpi tentang sebelas bintang, matahari, dan bulan yang bersujud kepadanya. Namun, perjalanan menuju kenyataan mimpi tersebut harus melewati lembah penderitaan yang panjang.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="space-y-4">
+                        <h4 class="text-lg font-bold text-red-400 uppercase tracking-widest">Konflik & Ujian</h4>
+                        <ul class="list-disc pl-5 space-y-2 text-sm">
+                            <li>Dibuang ke dalam sumur oleh saudara-saudaranya karena rasa iri.</li>
+                            <li>Dijual sebagai budak di Mesir dengan harga murah.</li>
+                            <li>Fitnah dan godaan dari Zulaikha yang berujung pada penjara bertahun-tahun.</li>
+                        </ul>
+                    </div>
+                    <div class="space-y-4">
+                        <h4 class="text-lg font-bold text-green-400 uppercase tracking-widest text-blue-400">Penyelesaian</h4>
+                        <p class="text-sm">Setelah bertahun-tahun di penjara, Allah memberikan kemampuan kepada Yusuf untuk menafsirkan mimpi Raja. Hal ini mengantarkannya menjadi Bendahara (Pemimpin Ekonomi) Mesir yang menyelamatkan rakyat dari paceklik, dan akhirnya dipertemukan kembali dengan keluarganya.</p>
+                    </div>
+                </div>
+
+                <blockquote class="bg-slate-950 p-8 rounded-2xl border border-slate-800 italic relative">
+                    <span class="text-6xl text-blue-500/20 absolute top-2 left-4">“</span>
+                    "Sesungguhnya barangsiapa yang bertakwa dan bersabar, maka sesungguhnya Allah tidak menyia-nyiakan pahala orang-orang yang berbuat baik."
+                    <p class="mt-4 font-bold text-slate-400 not-italic text-xs">— QS. Yusuf: 90</p>
+                </blockquote>
 
                 <div id="extraContent" class="hidden-content space-y-12 pt-10 border-t border-slate-800">
-                    
-                    <div id="metodologi">
-                        <h4 class="text-2xl font-bold text-white mb-6 flex items-center">
-                            <span class="w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400 mr-3 text-sm">01</span>
-                            Metodologi Analisis
-                        </h4>
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800">
-                                <h5 class="font-bold text-blue-400 mb-2">Komparatif Teologis</h5>
-                                <p class="text-sm">Membandingkan tren digital dengan 10 Nawaqidul Islam karya Syaikh Muhammad bin Abdul Wahhab untuk menentukan relevansi hukumnya.</p>
+                    <div class="grid md:grid-cols-2 gap-10">
+                        <div>
+                            <h4 class="text-xl font-bold text-blue-400 mb-6">Metodologi Pemahaman</h4>
+                            <div class="space-y-4 text-sm">
+                                <p><strong>Tafsir:</strong> Memahami konteks ayat melalui rujukan otoritatif ulama salaf.</p>
+                                <p><strong>Tadabbur:</strong> Merenungkan makna tersirat untuk menggerakkan hati dan iman.</p>
+                                <p><strong>Relevansi Modern:</strong> Mengaplikasikan keteguhan iman Nabi Yusuf dalam menghadapi godaan dunia digital.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-purple-400 mb-6">Hikmah & Pelajaran</h4>
+                            <ul class="space-y-3 text-sm">
+                                <li class="flex items-start"><span class="mr-2 text-blue-500">✔</span> Kesabaran tanpa batas dalam menghadapi ujian keluarga.</li>
+                                <li class="flex items-start"><span class="mr-2 text-blue-500">✔</span> Menjaga kesucian diri dan amanah meski dalam posisi sulit.</li>
+                                <li class="flex items-start"><span class="mr-2 text-blue-500">✔</span> Pemaafan adalah derajat tertinggi dalam kemenangan.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button onclick="toggleReadMore()" id="readMoreBtn" class="mt-12 w-full md:w-auto bg-blue-600 hover:bg-blue-500 text-white font-bold py-5 px-12 rounded-2xl transition-all duration-300 shadow-xl shadow-blue-500/20 active:scale-95 flex items-center justify-center mx-auto md:mx-0">
+                <span>Pelajari Hikmah Selengkapnya</span>
+                <svg id="btnIcon" class="w-5 h-5 ml-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+        </section>
+
+        <section id="artikel" class="grid md:grid-cols-3 gap-8">
+            <div class="bg-slate-900 p-8 rounded-[2rem] border border-slate-800 card-glow transition-all duration-300">
+                <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center mb-6 text-blue-500">🌊</div>
+                <h3 class="text-xl font-bold text-white mb-4">Nabi Musa AS vs Fir'aun</h3>
+                <p class="text-sm text-slate-400 leading-relaxed">Kisah perjuangan melawan tirani dan mukjizat terbelahnya Laut Merah sebagai simbol kemenangan al-haq.</p>
+            </div>
+            <div class="bg-slate-900 p-8 rounded-[2rem] border border-slate-800 card-glow transition-all duration-300">
+                <div class="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center mb-6 text-purple-500">🌙</div>
+                <h3 class="text-xl font-bold text-white mb-4">Ashabul Kahfi</h3>
+                <p class="text-sm text-slate-400 leading-relaxed">Keteguhan iman tujuh pemuda yang tertidur 309 tahun di dalam gua demi menjaga akidah dari penguasa zalim.</p>
+            </div>
+            <div class="bg-slate-900 p-8 rounded-[2rem] border border-slate-800 card-glow transition-all duration-300">
+                <div class="w-12 h-12 bg-red-500/10 rounded-xl flex items-center justify-center mb-6 text-red-500">🔥</div>
+                <h3 class="text-xl font-bold text-white mb-4">Nabi Ibrahim AS</h3>
+                <p class="text-sm text-slate-400 leading-relaxed">Pelajaran tentang pengorbanan tertinggi, pencarian hakikat Tuhan, dan ketaatan mutlak kepada perintah Allah.</p>
+            </div>
+        </section>
+
+        <section id="kontak" class="mt-24 bg-slate-900 border border-slate-800 rounded-[3rem] p-8 md:p-16 text-center">
+            <h3 class="text-3xl font-bold mb-4">Jalin Silaturahmi</h3>
+            <p class="text-slate-400 mb-10 max-w-lg mx-auto text-sm">Punya pertanyaan seputar literasi Qur'ani? Mari berdiskusi.</p>
+            <form class="max-w-2xl mx-auto space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <input type="text" placeholder="Nama" class="bg-slate-950 border border-slate-800 rounded-2xl px-6 py-4 focus:border-blue-500 transition outline-none">
+                    <input type="email" placeholder="Email" class="bg-slate-950 border border-slate-800 rounded-2xl px-6 py-4 focus:border-blue-500 transition outline-none">
+                </div>
+                <textarea rows="3" placeholder="Pesan Anda..." class="w-full bg-slate-950 border border-slate-800 rounded-2xl px-6 py-4 focus:border-blue-500 transition outline-none"></textarea>
+                <button class="w-full bg-blue-600 font-bold py-4 rounded-2xl hover:bg-blue-500 transition shadow-lg shadow-blue-500/20">Kirim Pesan</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="py-12 border-t border-slate-900 text-center">
+        <p class="text-[10px] text-slate-600 uppercase tracking-[0.5em] font-bold">&copy; 2026 MUHAMMAD RIZKI MUSTHOFA - TI.23.C1</p>
+        <p class="text-[8px] text-slate-700 mt-2">DIBUAT UNTUK TUGAS AKADEMIK UNIVERSITAS PELITA BANGSA</p>
+    </footer>
+
+    <script>
+        function toggleReadMore() {
+            const content = document.getElementById("extraContent");
+            const btn = document.getElementById("readMoreBtn");
+            const icon = document.getElementById("btnIcon");
+            
+            if (content.classList.contains("hidden-content")) {
+                content.classList.remove("hidden-content");
+                content.classList.add("show");
+                btn.querySelector('span').innerText = "Tutup Hikmah";
+                icon.style.transform = "rotate(180deg)";
+                btn.classList.replace("bg-blue-600", "bg-slate-800");
+            } else {
+                content.classList.add("hidden-content");
+                content.classList.remove("show");
+                btn.querySelector('span').innerText = "Pelajari Hikmah Selengkapnya";
+                icon.style.transform = "rotate(0deg)";
+                btn.classList.replace("bg-slate-800", "bg-blue-600");
+            }
+        }
+
+        // Navbar scroll effect
+        window.onscroll = function() {
+            const nav = document.querySelector('nav');
+            if (window.pageYOffset > 50) {
+                nav.classList.add('bg-slate-950');
+                nav.classList.remove('bg-transparent');
+            } else {
+                nav.classList.remove('bg-slate-950');
+            }
+        };
+    </script>
+</body>
+</html>                                <p class="text-sm">Membandingkan tren digital dengan 10 Nawaqidul Islam karya Syaikh Muhammad bin Abdul Wahhab untuk menentukan relevansi hukumnya.</p>
                             </div>
                             <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800">
                                 <h5 class="font-bold text-blue-400 mb-2">Observasi Digital</h5>
