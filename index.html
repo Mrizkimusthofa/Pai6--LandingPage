@@ -19,130 +19,245 @@
             -webkit-backdrop-filter: blur(12px);
         }
         .card-glow:hover {
-            box-shadow: 0 0 20px rgba(96, 165, 250, 0.2);
-            transform: translateY(-5px);
+            box-shadow: 0 0 30px rgba(96, 165, 250, 0.15);
+            transform: translateY(-8px);
         }
-        .hidden-content { display: none; }
-        .show { display: block; animation: fadeIn 0.8s ease-out; }
+        .active-link { color: #60a5fa !important; border-bottom: 2px solid #60a5fa; }
+        .section-fade { animation: fadeIn 0.6s ease-out; }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #0f172a; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-200 antialiased">
+<body class="bg-slate-950 text-slate-200 antialiased custom-scrollbar">
 
     <nav class="fixed top-0 w-full z-50 glass-nav border-b border-slate-900 transition-all duration-300">
         <div class="max-w-6xl mx-auto p-5 flex justify-between items-center">
             <div class="text-2xl font-bold tracking-tighter text-white">
                 RL <span class="text-blue-500">Qur’ani</span>
             </div>
-            <div class="hidden md:flex space-x-8 text-xs font-semibold uppercase tracking-widest text-slate-400">
-                <a href="#" class="hover:text-blue-400 flex items-center transition"><span class="mr-1">🏠</span> Beranda</a>
-                <a href="#artikel" class="hover:text-blue-400 flex items-center transition"><span class="mr-1">📄</span> Artikel</a>
-                <a href="#kisah-quran" class="hover:text-blue-400 flex items-center transition"><span class="mr-1">📖</span> Kisah Qur’an</a>
-                <a href="#biodata" class="hover:text-blue-400 flex items-center transition"><span class="mr-1">👤</span> Biodata</a>
-                <a href="#kontak" class="hover:text-blue-400 flex items-center transition"><span class="mr-1">✉️</span> Kontak</a>
+            <div class="hidden md:flex space-x-6 text-[10px] font-semibold uppercase tracking-widest text-slate-400">
+                <a href="javascript:void(0)" onclick="showPage('home')" id="nav-home" class="nav-btn hover:text-blue-400 transition flex items-center active-link"><span class="mr-1">🏠</span> Beranda</a>
+                <a href="javascript:void(0)" onclick="showPage('biodata')" id="nav-biodata" class="nav-btn hover:text-blue-400 transition flex items-center"><span class="mr-1">👤</span> Biodata</a>
+                <a href="javascript:void(0)" onclick="showPage('kisah')" id="nav-kisah" class="nav-btn hover:text-blue-400 transition flex items-center"><span class="mr-1">📖</span> Kisah Yusuf</a>
+                <a href="javascript:void(0)" onclick="showPage('artikel')" id="nav-artikel" class="nav-btn hover:text-blue-400 transition flex items-center"><span class="mr-1">🧠</span> Hakikat Manusia</a>
+                <a href="javascript:void(0)" onclick="showPage('studi')" id="nav-studi" class="nav-btn hover:text-blue-400 transition flex items-center"><span class="mr-1">⚠️</span> Studi Kasus</a>
             </div>
         </div>
     </nav>
 
-    <header class="max-w-6xl mx-auto px-6 pt-40 pb-20 text-center">
-        <div class="inline-block px-4 py-1 rounded-full bg-blue-500/10 text-blue-400 text-xs font-bold uppercase tracking-widest mb-6 border border-blue-500/20">
-            Digital Literacy Platform
-        </div>
-        <h1 class="text-5xl md:text-8xl font-extrabold mb-8 tracking-tighter leading-none">
-            Ruang <span class="gradient-text">Literasi Qur’ani</span>
-        </h1>
-        <p class="text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
-            "Menggali hikmah dari kisah-kisah dalam Al-Qur’an untuk membangun karakter dan iman di era digital."
-        </p>
-    </header>
+    <main class="max-w-6xl mx-auto px-6 pt-32 pb-32">
 
-    <main class="max-w-6xl mx-auto px-6 pb-32">
-        
-        <section id="biodata" class="mb-24">
-            <div class="bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700 rounded-[3rem] p-8 md:p-12 shadow-2xl flex flex-col md:flex-row items-center gap-10 hover:shadow-purple-500/10 transition-all duration-500">
-                <div class="relative">
-                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur opacity-40"></div>
-                    <img src="Foto-Profil.png" alt="Muhammad Rizki Musthofa" class="relative w-48 h-48 rounded-full object-cover border-4 border-slate-900">
+        <section id="page-home" class="section-fade">
+            <header class="text-center py-20">
+                <div class="inline-block px-4 py-1 rounded-full bg-blue-500/10 text-blue-400 text-[10px] font-bold uppercase tracking-widest mb-6 border border-blue-500/20">UAS Project: Digital Literacy</div>
+                <h1 class="text-6xl md:text-8xl font-extrabold mb-8 tracking-tighter leading-none">Ruang <span class="gradient-text">Literasi Qur’ani</span></h1>
+                <p class="text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">Menjembatani nilai luhur Al-Qur'an dengan pemikiran kritis di era disrupsi teknologi.</p>
+            </header>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-slate-900/50 p-8 rounded-[2.5rem] border border-slate-800 card-glow transition-all duration-300">
+                    <h3 class="text-xl font-bold text-white mb-4">📖 Kisah Terlengkap</h3>
+                    <p class="text-sm text-slate-400 mb-6">Analisis perjalanan hidup Nabi Yusuf AS dari sumur hingga istana sebagai model manajemen krisis.</p>
+                    <button onclick="showPage('kisah')" class="text-blue-400 text-xs font-bold uppercase tracking-widest hover:underline">Pelajari →</button>
                 </div>
-                <div class="text-center md:text-left space-y-4">
-                    <h2 class="text-3xl font-bold text-white">Muhammad Rizki Musthofa</h2>
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs font-semibold uppercase tracking-widest text-slate-400">
-                        <div class="bg-slate-950/50 p-3 rounded-xl border border-slate-700">NIM: 312310034</div>
-                        <div class="bg-slate-950/50 p-3 rounded-xl border border-slate-700">Kelas: TI.23.C1</div>
-                        <div class="bg-slate-950/50 p-3 rounded-xl border border-slate-700">TI Universitas</div>
-                        <div class="bg-slate-950/50 p-3 rounded-xl border border-slate-700">Prodi: T. Informatika</div>
-                    </div>
-                    <p class="text-slate-300 leading-relaxed max-w-xl">
-                        "Mahasiswa Teknik Informatika yang tertarik pada pengembangan web dan literasi digital berbasis nilai-nilai Islam."
-                    </p>
+                <div class="bg-slate-900/50 p-8 rounded-[2.5rem] border border-slate-800 card-glow transition-all duration-300">
+                    <h3 class="text-xl font-bold text-white mb-4">🧠 Esensi Kemanusiaan</h3>
+                    <p class="text-sm text-slate-400 mb-6">Mengkaji ulang definisi diri manusia di tengah kepungan kecerdasan buatan (AI) dan media sosial.</p>
+                    <button onclick="showPage('artikel')" class="text-blue-400 text-xs font-bold uppercase tracking-widest hover:underline">Baca Analisis →</button>
+                </div>
+                <div class="bg-slate-900/50 p-8 rounded-[2.5rem] border border-slate-800 card-glow transition-all duration-300">
+                    <h3 class="text-xl font-bold text-white mb-4">⚠️ Kritik Digital</h3>
+                    <p class="text-sm text-slate-400 mb-6">Studi kasus mendalam mengenai pergeseran etika dan moralitas di ruang publik digital.</p>
+                    <button onclick="showPage('studi')" class="text-blue-400 text-xs font-bold uppercase tracking-widest hover:underline">Buka Studi →</button>
                 </div>
             </div>
         </section>
 
-        <section id="kisah-quran" class="bg-slate-900 border border-slate-800 rounded-[3rem] p-8 md:p-16 mb-12 shadow-2xl relative overflow-hidden">
-            <div class="absolute -top-20 -right-20 w-64 h-64 bg-blue-500/10 blur-[100px]"></div>
-            
-            <div class="inline-block px-4 py-1 rounded-full bg-purple-500/10 text-purple-400 text-xs font-bold mb-6 border border-purple-500/20 uppercase">Featured Story</div>
-            <h2 class="text-3xl md:text-5xl font-bold mb-8 text-white tracking-tight">Kisah Nabi Yusuf AS: Pelajaran Tentang Sabar dan Takdir Allah</h2>
-            
-            <div class="prose prose-invert max-w-none text-slate-300 space-y-8">
-                <div class="bg-slate-950/50 p-6 rounded-2xl border-l-4 border-blue-500">
-                    <h3 class="text-xl font-bold text-white mb-2 italic">Pembukaan</h3>
-                    <p>Kisah ini merupakan "Ahsanul Qashash" (Kisah Terbaik) yang diabadikan dalam Al-Qur'an Surah Yusuf. Ia bukan sekadar biografi, melainkan gambaran nyata tentang bagaimana takdir Allah bekerja di balik kesulitan manusia.</p>
+        <section id="page-biodata" class="hidden section-fade">
+            <div class="bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700 rounded-[3rem] p-10 md:p-16 flex flex-col md:flex-row items-center gap-12">
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur opacity-40 group-hover:opacity-100 transition duration-1000"></div>
+                    <img src="Foto-Profil.png" alt="Mustofa" class="relative w-56 h-56 rounded-full object-cover border-4 border-slate-900">
                 </div>
-
-                <div>
-                    <h3 class="text-xl font-bold text-white mb-4">Ringkasan Perjalanan Hidup</h3>
-                    <p>Perjalanan Nabi Yusuf AS dimulai dari sebuah mimpi tentang sebelas bintang, matahari, dan bulan yang bersujud kepadanya. Namun, perjalanan menuju kenyataan mimpi tersebut harus melewati lembah penderitaan yang panjang.</p>
-                </div>
-
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="space-y-4">
-                        <h4 class="text-lg font-bold text-red-400 uppercase tracking-widest">Konflik & Ujian</h4>
-                        <ul class="list-disc pl-5 space-y-2 text-sm">
-                            <li>Dibuang ke dalam sumur oleh saudara-saudaranya karena rasa iri.</li>
-                            <li>Dijual sebagai budak di Mesir dengan harga murah.</li>
-                            <li>Fitnah dan godaan dari Zulaikha yang berujung pada penjara bertahun-tahun.</li>
-                        </ul>
-                    </div>
-                    <div class="space-y-4">
-                        <h4 class="text-lg font-bold text-green-400 uppercase tracking-widest text-blue-400">Penyelesaian</h4>
-                        <p class="text-sm">Setelah bertahun-tahun di penjara, Allah memberikan kemampuan kepada Yusuf untuk menafsirkan mimpi Raja. Hal ini mengantarkannya menjadi Bendahara (Pemimpin Ekonomi) Mesir yang menyelamatkan rakyat dari paceklik, dan akhirnya dipertemukan kembali dengan keluarganya.</p>
-                    </div>
-                </div>
-
-                <blockquote class="bg-slate-950 p-8 rounded-2xl border border-slate-800 italic relative">
-                    <span class="text-6xl text-blue-500/20 absolute top-2 left-4">“</span>
-                    "Sesungguhnya barangsiapa yang bertakwa dan bersabar, maka sesungguhnya Allah tidak menyia-nyiakan pahala orang-orang yang berbuat baik."
-                    <p class="mt-4 font-bold text-slate-400 not-italic text-xs">— QS. Yusuf: 90</p>
-                </blockquote>
-
-                <div id="extraContent" class="hidden-content space-y-12 pt-10 border-t border-slate-800">
-                    <div class="grid md:grid-cols-2 gap-10">
-                        <div>
-                            <h4 class="text-xl font-bold text-blue-400 mb-6">Metodologi Pemahaman</h4>
-                            <div class="space-y-4 text-sm">
-                                <p><strong>Tafsir:</strong> Memahami konteks ayat melalui rujukan otoritatif ulama salaf.</p>
-                                <p><strong>Tadabbur:</strong> Merenungkan makna tersirat untuk menggerakkan hati dan iman.</p>
-                                <p><strong>Relevansi Modern:</strong> Mengaplikasikan keteguhan iman Nabi Yusuf dalam menghadapi godaan dunia digital.</p>
-                            </div>
+                <div class="space-y-6 flex-1">
+                    <h2 class="text-4xl font-bold text-white text-center md:text-left">Muhammad Rizki Musthofa</h2>
+                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 text-center">
+                        <div class="p-3 bg-slate-950 rounded-xl border border-slate-700">
+                            <p class="text-[8px] text-slate-500 uppercase">Mahasiswa</p>
+                            <p class="text-[10px] font-bold text-blue-400">TI.23.C1</p>
                         </div>
-                        <div>
-                            <h4 class="text-xl font-bold text-purple-400 mb-6">Hikmah & Pelajaran</h4>
-                            <ul class="space-y-3 text-sm">
-                                <li class="flex items-start"><span class="mr-2 text-blue-500">✔</span> Kesabaran tanpa batas dalam menghadapi ujian keluarga.</li>
-                                <li class="flex items-start"><span class="mr-2 text-blue-500">✔</span> Menjaga kesucian diri dan amanah meski dalam posisi sulit.</li>
-                                <li class="flex items-start"><span class="mr-2 text-blue-500">✔</span> Pemaafan adalah derajat tertinggi dalam kemenangan.</li>
+                        <div class="p-3 bg-slate-950 rounded-xl border border-slate-700">
+                            <p class="text-[8px] text-slate-500 uppercase">NIM</p>
+                            <p class="text-[10px] font-bold text-purple-400">312310034</p>
+                        </div>
+                        <div class="p-3 bg-slate-950 rounded-xl border border-slate-700">
+                            <p class="text-[8px] text-slate-500 uppercase">Prodi</p>
+                            <p class="text-[10px] font-bold text-green-400">Informatika</p>
+                        </div>
+                        <div class="p-3 bg-slate-950 rounded-xl border border-slate-700">
+                            <p class="text-[8px] text-slate-500 uppercase">Universitas</p>
+                            <p class="text-[10px] font-bold text-orange-400">Pelita Bangsa</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-300 text-lg italic text-center md:text-left">"Fokus pada integrasi nilai-nilai Islam dalam pengembangan solusi teknologi modern."</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="page-kisah" class="hidden section-fade">
+            <div class="bg-slate-900/40 p-8 md:p-16 rounded-[3rem] border border-slate-800 space-y-12">
+                <div>
+                    <h2 class="text-4xl md:text-6xl font-bold text-white tracking-tighter mb-6 leading-tight">Analisis Historis: <br><span class="text-blue-500">Kisah Nabi Yusuf AS</span></h2>
+                    <p class="text-slate-400 text-lg">Mengapa Al-Qur'an menyebutnya sebagai <em>Ahsanul Qashash</em> (Kisah Terbaik)? Berikut adalah rincian fasenya:</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="space-y-8">
+                        <div class="bg-slate-950 p-8 rounded-3xl border border-slate-800 relative">
+                            <span class="absolute -top-4 -left-4 w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center font-bold">1</span>
+                            <h4 class="text-xl font-bold text-white mb-3">Fase Mimpi & Pengkhianatan</h4>
+                            <p class="text-sm text-slate-400 leading-relaxed">
+                                Dimulai dari visi spiritual (mimpi 11 bintang) yang memicu kecemburuan sosial saudara-saudaranya. Ujian pertama adalah pengasingan fisik di dasar sumur—sebuah metafora tentang titik terendah dalam hidup sebelum kebangkitan.
+                            </p>
+                        </div>
+                        <div class="bg-slate-950 p-8 rounded-3xl border border-slate-800 relative">
+                            <span class="absolute -top-4 -left-4 w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center font-bold">2</span>
+                            <h4 class="text-xl font-bold text-white mb-3">Fase Fitnah & Integritas</h4>
+                            <p class="text-sm text-slate-400 leading-relaxed">
+                                Saat di Mesir, beliau diuji dengan rayuan harta dan tahta (Zulaikha). Yusuf AS memilih penjara fisik daripada penjara moral. Ini mengajarkan bahwa integritas lebih berharga daripada kebebasan yang semu.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="space-y-8">
+                        <div class="bg-slate-950 p-8 rounded-3xl border border-slate-800 relative">
+                            <span class="absolute -top-4 -left-4 w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center font-bold">3</span>
+                            <h4 class="text-xl font-bold text-white mb-3">Fase Diplomasi & Visi Ekonomi</h4>
+                            <p class="text-sm text-slate-400 leading-relaxed">
+                                Kemampuan menafsirkan mimpi raja membawa Yusuf AS menjadi bendahara negara. Beliau menunjukkan sistem manajemen pangan (Silo) yang visioner untuk menghadapi masa paceklik 7 tahun, sebuah contoh <em>Data Forecasting</em> masa lampau.
+                            </p>
+                        </div>
+                        <div class="bg-slate-950 p-8 rounded-3xl border border-slate-800 relative">
+                            <span class="absolute -top-4 -left-4 w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center font-bold">4</span>
+                            <h4 class="text-xl font-bold text-white mb-3">Fase Rekonsiliasi & Pemaafan</h4>
+                            <p class="text-sm text-slate-400 leading-relaxed">
+                                Puncak cerita bukan pada kekuasaan, melainkan pada saat beliau memaafkan saudara-saudaranya. Kalimat beliau <em>"Laa tatsriiba 'alaikumul yaum"</em> (Tidak ada cercaan bagi kalian hari ini) adalah standar tertinggi kearifan pemimpin.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-8 bg-blue-500/5 rounded-3xl border border-blue-500/20">
+                    <h4 class="text-xl font-bold text-blue-400 mb-4 uppercase tracking-widest">Hikmah Untuk Mahasiswa TI:</h4>
+                    <p class="text-sm italic text-slate-300">"Kisah Yusuf mengajarkan bahwa keahlian (Interpretasi Mimpi/Data) harus dibarengi dengan Amanah (Integritas). Tanpa karakter, kecerdasan hanya akan membawa kehancuran."</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="page-artikel" class="hidden section-fade">
+            <div class="bg-slate-900/40 p-8 md:p-16 rounded-[3rem] border border-slate-800">
+                <h2 class="text-4xl md:text-6xl font-bold text-white mb-10 tracking-tighter">HAKIKAT MANUSIA: <br><span class="text-purple-500">Antara Fitrah & Algoritma</span></h2>
+                
+                <div class="grid md:grid-cols-3 gap-10">
+                    <div class="md:col-span-2 space-y-8">
+                        <div class="prose prose-invert max-w-none text-slate-300">
+                            <h3 class="text-2xl font-bold text-white border-b border-slate-800 pb-2">Komposisi Metafisika</h3>
+                            <p class="mt-4">Menurut pandangan Islam, manusia bukan sekadar organisme biologis. Kita terdiri dari tiga komponen kunci:</p>
+                            <ul class="space-y-4">
+                                <li><strong>1. Ruh:</strong> Esensi ilahi yang memberikan kesadaran spiritual dan kerinduan pada kebenaran.</li>
+                                <li><strong>2. Aql (Akal):</strong> Instrumen untuk menalar dan membedakan antara yang hak dan batil, yang di era digital diuji oleh banjir informasi.</li>
+                                <li><strong>3. Nafs (Jiwa):</strong> Sisi emosional yang bisa condong pada kebaikan (Mutmainnah) atau keburukan (Ammarah).</li>
                             </ul>
+                        </div>
+                        <div class="prose prose-invert max-w-none text-slate-300">
+                            <h3 class="text-2xl font-bold text-white border-b border-slate-800 pb-2">Tantangan Identitas Digital</h3>
+                            <p class="mt-4">
+                                Di dunia maya, manusia sering mengalami "Disrupsi Identitas". Profil digital kita sering kali menjadi berhala baru (validasi jumlah like/follower). Hakikat manusia sebagai hamba Allah mulai tergeser menjadi hamba algoritma. Kita perlu mengembalikan kesadaran bahwa eksistensi kita diukur dari kemanfaatan, bukan sekadar popularitas.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="bg-slate-950 p-6 rounded-2xl border border-purple-500/30">
+                            <h4 class="font-bold text-purple-400 mb-2 uppercase text-xs">Pesan Kunci</h4>
+                            <p class="text-xs leading-relaxed italic text-slate-400">"Manusia adalah subjek bagi teknologi, bukan objek. Membiarkan teknologi mendikte moralitas berarti merendahkan derajat kemanusiaan kita sendiri."</p>
+                        </div>
+                        <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800">
+                            <h4 class="font-bold text-white mb-4 uppercase text-xs tracking-widest">Rujukan Pemikiran</h4>
+                            <div class="space-y-4">
+                                <div class="text-[10px] text-slate-500">
+                                    <p class="font-bold text-slate-300">Imam Al-Ghazali</p>
+                                    <p>Konsep pembersihan jiwa (Tazkiyatun Nafs) dalam berinteraksi dengan dunia.</p>
+                                </div>
+                                <div class="text-[10px] text-slate-500">
+                                    <p class="font-bold text-slate-300">Dr. Syed Naquib al-Attas</p>
+                                    <p>Makna Adab dan keadilan dalam peradaban manusia modern.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <button onclick="toggleReadMore()" id="readMoreBtn" class="mt-12 w-full md:w-auto bg-blue-600 hover:bg-blue-500 text-white font-bold py-5 px-12 rounded-2xl transition-all duration-300 shadow-xl shadow-blue-500/20 active:scale-95 flex items-center justify-center mx-auto md:mx-0">
+        <section id="page-studi" class="hidden section-fade">
+            <div class="max-w-5xl mx-auto space-y-12">
+                <div class="text-center">
+                    <h2 class="text-4xl md:text-6xl font-bold text-white mb-4 tracking-tighter">STUDI KASUS</h2>
+                    <p class="text-blue-400 uppercase tracking-[0.3em] text-[10px] font-bold">Analisis Etika Digital & Perilaku Menyimpang</p>
+                </div>
+                
+                <div class="bg-slate-900 border border-slate-800 rounded-[3rem] overflow-hidden shadow-2xl">
+                    <img src="studi-kasus.jpg" alt="Analisis Digital" class="w-full h-80 object-cover opacity-50">
+                    <div class="p-10 md:p-16 space-y-12">
+                        <div class="grid md:grid-cols-3 gap-8 border-b border-slate-800 pb-10">
+                            <div class="md:col-span-1"><h3 class="text-xl font-bold text-blue-400 uppercase">01. Masalah</h3></div>
+                            <div class="md:col-span-2">
+                                <h4 class="text-2xl font-bold text-white mb-4">Normalisasi Penghinaan (Istihza')</h4>
+                                <p class="text-slate-300 text-sm">Banyak konten negatif saat ini berlindung di balik kata "satire" untuk menyerang privasi atau nilai sakral. Ini merupakan bentuk kegagalan sistemik dalam menjaga Adab berinteraksi.</p>
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-3 gap-8 border-b border-slate-800 pb-10">
+                            <div class="md:col-span-1"><h3 class="text-xl font-bold text-purple-400 uppercase">02. Analisis</h3></div>
+                            <div class="md:col-span-2 space-y-4">
+                                <div class="bg-slate-950 p-4 rounded-xl border border-slate-800">
+                                    <p class="text-xs font-bold text-white">Psikologi Digital:</p>
+                                    <p class="text-xs text-slate-500 italic">"Online Disinhibition Effect" membuat pengguna kehilangan rem moral karena anonimitas.</p>
+                                </div>
+                                <div class="bg-slate-950 p-4 rounded-xl border border-slate-800">
+                                    <p class="text-xs font-bold text-white">Solusi Teknik:</p>
+                                    <p class="text-xs text-slate-500 italic">Perlunya implementasi filtering berbasis NLP (Natural Language Processing) untuk mendeteksi ujaran kebencian.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gradient-to-r from-blue-600/10 to-purple-600/10 p-10 rounded-[2.5rem] border border-blue-500/20">
+                            <h4 class="text-2xl font-bold text-white mb-4">Kesimpulan Akademik</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed italic">
+                                Sebagai mahasiswa Informatika, saya menyimpulkan bahwa teknologi hanya akan bermanfaat jika dikendalikan oleh manusia yang telah memahami hakikat dirinya. Literasi Qur'ani adalah kompas utama dalam navigasi kita di samudera digital yang tanpa batas ini.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="py-12 border-t border-slate-900 text-center opacity-40">
+        <p class="text-[10px] uppercase tracking-[0.5em] font-bold">&copy; 2026 MUHAMMAD RIZKI MUSTHOFA - TI.23.C1</p>
+        <p class="text-[8px] mt-2 italic">Dibuat untuk Tugas Literasi Digital - Universitas Pelita Bangsa</p>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            // Sembunyikan semua section
+            const sections = document.querySelectorAll('main > section');
+            sections.forEach(s => s.classList.add('hidden'));
+
+            // Tampilkan sect-center justify-center mx-auto md:mx-0">
                 <span>Pelajari Hikmah Selengkapnya</span>
                 <svg id="btnIcon" class="w-5 h-5 ml-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
             </button>
